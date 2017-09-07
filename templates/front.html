@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+	{% if posts %}
+		{% for p in posts %}
+			{{ p.render() | safe }}
+			<br><br>
+			{% endfor %}
+	{%endif%}
 
-  {% for p in posts %}
-    {{ p.render() | safe }}
-    <br><br>
-  {% endfor %}
-
+ <div class = 'time'>queried {{timediff}} seconds ago</div>
 {% endblock %}
+
+

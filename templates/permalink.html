@@ -2,4 +2,5 @@
 
 {% block content %}
   {{post.render() | safe}}
+ <div class = 'time'>queried {{timediff}} seconds ago</div>
 {% endblock %}
